@@ -16,11 +16,11 @@ import lombok.NoArgsConstructor;
 public class ProductCreateDTO {
 
     @NotBlank(message = "O nome do produto é obrigatório")
-    @Size(message = "O nome do produto não pode ultrapassar de 50 caracteres")
+    @Size(max = 50, message = "O nome do produto não pode ultrapassar de 50 caracteres")
     private String name;
 
     @NotBlank(message = "A descrição do produto é obrigatória")
-    @Size(message = "A descrição do produto não pode ultrapassar de 100 caracteres")
+    @Size(max = 100, message = "A descrição do produto não pode ultrapassar de 100 caracteres")
     private String description;
 
     @NotNull(message = "O preço do produto é obrigatório")
