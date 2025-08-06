@@ -8,6 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 
 
 @Data
@@ -25,7 +26,7 @@ public class ProductCreateDTO {
 
     @NotNull(message = "O preço do produto é obrigatório")
     @Positive(message = "Preço do produto deve ser maior que 0")
-    private Double price;
+    private BigDecimal price;
 
     @NotNull(message = "A Quantidade do produto é obrigatória")
     @Positive(message = "Stock do produto não pode ser 0")
