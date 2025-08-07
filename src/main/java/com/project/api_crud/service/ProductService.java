@@ -7,8 +7,10 @@ import com.project.api_crud.model.Product;
 import com.project.api_crud.repository.ProductRepository;
 import com.project.api_crud.dto.ProductCreateDTO;
 import com.project.api_crud.dto.ProductResponseDTO;
+import jakarta.validation.ValidationException;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -63,7 +65,12 @@ public class ProductService {
 
         updateDTO.getName().ifPresent(existingProduct::setName);
         updateDTO.getDescription().ifPresent(existingProduct::setDescription);
-        updateDTO.getPrice().ifPresent(existingProduct::setPrice);
+        updateDTO.getPrice().ifPresent(price -> {
+            if (price.compareTo(BigDecimal.valueOf(0.01)) < 0) {
+                throw new ValidationException("O preço deve ser maior que zero");
+            }
+            existingProduct.setPrice(price);
+        });
         updateDTO.getStock().ifPresent(existingProduct::setStock);
 
         Product updatedProduct = productRepository.save(existingProduct);
