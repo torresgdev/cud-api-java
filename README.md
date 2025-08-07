@@ -58,8 +58,8 @@ spring.datasource.url=jdbc:mysql://localhost:3306/api_crud
 spring.datasource.username=seu_usuario
 spring.datasource.password=sua_senha
 spring.jpa.hibernate.ddl-auto=update
+````
 
----
 
 ## Executando a Aplicação
 
