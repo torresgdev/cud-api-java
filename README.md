@@ -68,13 +68,13 @@ spring.jpa.hibernate.ddl-auto=update
 3. Execute o comando para rodar a aplicação:
     - mvn spring-boot:run
 
-A aplicação estará disponível em (http://localhost:8080).
+A aplicação estará disponível em http://localhost:8080.
 
 ---
 
 ## Documentação da API (Swagger/OpenAPI)
 
 Após iniciar a aplicação, a documentação interativa da API estará disponível em:
-- [Swagger] (http://localhost:8080/swagger-ui.html)
+- http://localhost:8080/swagger-ui.html
 
 Nesta interface, você poderá visualizar todos os endpoints, seus modelos de dados e testá-los diretamente.
