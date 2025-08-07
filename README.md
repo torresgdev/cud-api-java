@@ -58,3 +58,23 @@ spring.datasource.url=jdbc:mysql://localhost:3306/api_crud
 spring.datasource.username=seu_usuario
 spring.datasource.password=sua_senha
 spring.jpa.hibernate.ddl-auto=update
+
+---
+
+## Executando a Aplicação
+
+1. Clone este repositório.
+2. Navegue até a pasta raiz do projeto.
+3. Execute o comando para rodar a aplicação:
+    - mvn spring-boot:run
+
+A aplicação estará disponível em (http://localhost:8080).
+
+---
+
+## Documentação da API (Swagger/OpenAPI)
+
+Após iniciar a aplicação, a documentação interativa da API estará disponível em:
+- [Swagger] (http://localhost:8080/swagger-ui.html)
+
+Nesta interface, você poderá visualizar todos os endpoints, seus modelos de dados e testá-los diretamente.
